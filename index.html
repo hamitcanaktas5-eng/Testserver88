@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROXY STORE | Çok Yakında</title>
+  <meta name="description" content="ROXY STORE çok yakında yayında." />
+  <meta name="theme-color" content="#0b0b10" />
+  <style>
+    :root{
+      --bg: #07070c;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --line: rgba(255,255,255,.14);
+      --shadow: 0 20px 60px rgba(0,0,0,.55);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(142, 84, 255, .22), transparent 60%),
+        radial-gradient(900px 500px at 80% 30%, rgba(0, 255, 213, .12), transparent 55%),
+        radial-gradient(700px 500px at 50% 85%, rgba(255, 0, 122, .10), transparent 55%),
+        var(--bg);
+      overflow:hidden;
+    }
+
+    .grain{
+      position:fixed; inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;
+      opacity:.12;
+      pointer-events:none;
+    }
+
+    .wrap{
+      height:100%;
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+
+    .card{
+      width:min(560px, 100%);
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .shine{
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(700px 200px at 30% 0%, rgba(255,255,255,.10), transparent 55%);
+      pointer-events:none;
+    }
+
+    .top{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom: 18px;
+    }
+
+    .logo{
+      width:44px; height:44px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing:.2px;
+    }
+
+    .dot{
+      width:8px; height:8px;
+      border-radius:99px;
+      background: #2bff9a;
+      box-shadow: 0 0 0 4px rgba(43,255,154,.12);
+      animation: pulse 1.6s infinite;
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1); opacity:1}
+      50%{transform:scale(1.35); opacity:.7}
+      100%{transform:scale(1); opacity:1}
+    }
+
+    h1{
+      margin: 6px 0 6px;
+      font-size: clamp(28px, 4vw, 36px);
+      letter-spacing: .4px;
+    }
+
+    p{
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .divider{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+      margin: 18px 0;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 8px;
+    }
+
+    .pill{
+      padding:10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      font-size: 13px;
+      color: rgba(255,255,255,.80);
+    }
+
+    .footer{
+      margin-top: 14px;
+      font-size: 12px;
+      color: rgba(255,255,255,.55);
+    }
+
+    a{ color: rgba(255,255,255,.88); text-decoration:none; border-bottom:1px dashed rgba(255,255,255,.35);}
+    a:hover{ border-bottom-color: rgba(255,255,255,.75);}
+
+    .float{
+      position:absolute;
+      width:220px; height:220px;
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity:.25;
+      pointer-events:none;
+      animation: drift 10s ease-in-out infinite;
+    }
+    .f1{ background: rgba(142,84,255,.9); left:-80px; top:-90px;}
+    .f2{ background: rgba(0,255,213,.9); right:-90px; bottom:-110px; animation-duration: 12s;}
+    @keyframes drift{
+      0%,100%{ transform: translate(0,0) }
+      50%{ transform: translate(24px, 18px) }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <div class="wrap">
+    <div class="card" role="main" aria-label="ROXY STORE Yakında">
+      <div class="shine"></div>
+      <div class="float f1"></div>
+      <div class="float f2"></div>
+
+      <div class="top">
+        <div class="logo" aria-hidden="true">
+          <!-- Basit R harfi logosu -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M7 20V4h8a5 5 0 0 1 0 10H7" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M13 14l5 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="badge"><span class="dot"></span> Domain aktif • Yakında yayında</div>
+      </div>
+
+      <h1>ROXY STORE</h1>
+      <p>
+        Sitemiz hazırlanıyor. <strong>Çok yakında</strong> burada olacağız.
+        Şimdilik bu alan adı tarafımızdan rezerve edilmiştir.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="meta">
+        <div class="pill">roxystore.com.tr</div>
+        <div class="pill">Güvenli yayın</div>
+        <div class="pill">Güncellemeler yakında</div>
+      </div>
+
+      <div class="footer">
+        © <span id="y"></span> ROXY STORE
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
